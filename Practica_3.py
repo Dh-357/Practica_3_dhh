@@ -13,7 +13,18 @@ def triangulo_pascal(): #recibe niveles
     pass
 
 def subcadenas(): #recibe cadena
-    print("probando funcion cuatro")    
+     if os.name == "posix":
+        os.system("clear")        
+    elif os.name == "ce" or os.name == "nt" or os.name == "dos":
+        os.system("cls")
+    listax=[]
+    listay=[]
+    cadena=input("Introduce la cadena (entre comillas plis):    ")
+    listax=list(cadena)
+    for L in range(0, len(listax)+1):
+        for elqsige in itertools.combinations(listax, L):
+            listay.append(elqsige)
+    print(listay)    
     pass
 
 def default():
