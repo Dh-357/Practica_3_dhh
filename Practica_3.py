@@ -13,7 +13,7 @@ def triangulo_pascal(): #recibe niveles
     pass
 
 def subcadenas(): #recibe cadena
-     if os.name == "posix":
+    if os.name == "posix":
         os.system("clear")        
     elif os.name == "ce" or os.name == "nt" or os.name == "dos":
         os.system("cls")
