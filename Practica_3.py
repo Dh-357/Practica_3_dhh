@@ -5,16 +5,12 @@ def mas_repetido(): #recibe matriz
     pass
 
 def condensa(): #recibe cadena
-    if os.name == "posix":
-        os.system("clear")        
-    elif os.name == "ce" or os.name == "nt" or os.name == "dos":
-        os.system("cls")
+    limpia_pantalla()
     cadena=input("Introduce la cadena entre comillas:  ")
     lista_palabras=list(cadena)
     frecuencia_palabras=[]
     for x in lista_palabras:
         frecuencia_palabras.append(lista_palabras.count(x))
-    
     lista_repetida=list(zip(lista_palabras, frecuencia_palabras))
     lista_nueva=[]
     for y in lista_repetida:
@@ -29,19 +25,24 @@ def triangulo_pascal(): #recibe niveles
     pass
 
 def subcadenas(): #recibe cadena
-    if os.name == "posix":
-        os.system("clear")        
-    elif os.name == "ce" or os.name == "nt" or os.name == "dos":
-        os.system("cls")
+    limpia_pantalla()
     listax=[]
     listay=[]
-    cadena=input("Introduce la cadena (entre comillas plis):    ")
+    cadena=input("Introduce la cadena (entre comillas):    ")
     listax=list(cadena)
     for L in range(0, len(listax)+1):
         for elqsige in itertools.combinations(listax, L):
             listay.append(elqsige)
     print(listay)    
     pass
+
+def limpia_pantalla():
+    if os.name == "posix":
+        os.system("clear")        
+    elif os.name == "ce" or os.name == "nt" or os.name == "dos":
+        os.system("cls")
+    pass
+    
 
 def default():
     print("Escoje un numero del 1 al 4 (unicamente)")
@@ -61,62 +62,32 @@ if __name__=="__main__":
             menu=False
             
         elif eleccion == 1:
-            if os.name == "posix":
-                os.system("clear")        
-            elif os.name == "ce" or os.name == "nt" or os.name == "dos":
-                os.system("cls")
+            limpia_pantalla()
             mas_repetido()
             raw_input("Funcion completada.....(press ENTER)")
-            if os.name == "posix":
-                os.system("clear")        
-            elif os.name == "ce" or os.name == "nt" or os.name == "dos":
-                os.system("cls")
+            limpia_pantalla()
     
                 
         elif eleccion == 2:
-            if os.name == "posix":
-                os.system("clear")        
-            elif os.name == "ce" or os.name == "nt" or os.name == "dos":
-                os.system("cls")
+            limpia_pantalla()
             condensa() 
             raw_input("Funcion completada.....(press ENTER)")            
-            if os.name == "posix":
-                os.system("clear")        
-            elif os.name == "ce" or os.name == "nt" or os.name == "dos":
-                os.system("cls")
+            limpia_pantalla()
         elif eleccion == 3:
-            if os.name == "posix":
-                os.system("clear")        
-            elif os.name == "ce" or os.name == "nt" or os.name == "dos":
-                os.system("cls")
+            limpia_pantalla()
             triangulo_pascal()
             raw_input("Funcion completada.....(press ENTER)")            
-            if os.name == "posix":
-                os.system("clear")        
-            elif os.name == "ce" or os.name == "nt" or os.name == "dos":
-                os.system("cls")
+            limpia_pantalla()
         elif eleccion == 4:
-            if os.name == "posix":
-                os.system("clear")        
-            elif os.name == "ce" or os.name == "nt" or os.name == "dos":
-                os.system("cls")
+            limpia_pantalla()
             subcadenas()
             raw_input("Funcion completada.....(press ENTER)")            
-            if os.name == "posix":
-                os.system("clear")        
-            elif os.name == "ce" or os.name == "nt" or os.name == "dos":
-                os.system("cls")
+            limpia_pantalla()
         else:
-            if os.name == "posix":
-                os.system("clear")        
-            elif os.name == "ce" or os.name == "nt" or os.name == "dos":
-                os.system("cls")
+            limpia_pantalla()
             default()
             raw_input("Funcion completada.....(press ENTER)")            
-            if os.name == "posix":
-                os.system("clear")        
-            elif os.name == "ce" or os.name == "nt" or os.name == "dos":
-                os.system("cls")
+            limpia_pantalla()
             
         
     
