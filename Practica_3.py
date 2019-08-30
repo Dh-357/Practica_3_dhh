@@ -5,7 +5,23 @@ def mas_repetido(): #recibe matriz
     pass
 
 def condensa(): #recibe cadena
-    print("probando funcion dos")
+    if os.name == "posix":
+        os.system("clear")        
+    elif os.name == "ce" or os.name == "nt" or os.name == "dos":
+        os.system("cls")
+    cadena=input("Introduce la cadena entre comillas:  ")
+    lista_palabras=list(cadena)
+    frecuencia_palabras=[]
+    for x in lista_palabras:
+        frecuencia_palabras.append(lista_palabras.count(x))
+    
+    lista_repetida=list(zip(lista_palabras, frecuencia_palabras))
+    lista_nueva=[]
+    for y in lista_repetida:
+        if y not in lista_nueva:
+            lista_nueva.append(y)
+    print("Las parejas ordenadas con la letra y el numero de repeticiones es:\n")
+    print(lista_nueva)
     pass
 
 def triangulo_pascal(): #recibe niveles
