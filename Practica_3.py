@@ -27,7 +27,19 @@ def condensa(): #recibe cadena
     pass
 
 def triangulo_pascal(): #recibe niveles
-    print("probando funcion tres")
+    limpia_pantalla()
+    nivel=int(input("Indique el nivel:   "))
+    if nivel<=0:
+        print "Introduce un numero mayor a 0:   " 
+    else:    
+        lista=[[1],[1,1]]
+        for i in range(1,nivel):
+            nivel = [1]
+            for j in range(0,len(lista[i])-1):
+                nivel.extend([lista[i][j] + lista[i][j+1]])
+            nivel+= [1]
+            lista.append(nivel)
+        print lista
     pass
 
 def subcadenas(): #recibe cadena
