@@ -1,10 +1,14 @@
 import os
 import itertools
 def mas_repetido(): #recibe matriz
-    matriz=input("ingrese_la_matriz")
-    print matriz
-   
-    
+    limpia_pantalla()
+    matriz=input("ingrese_la_matriz entre corchetes [[n],[a],[m],[x]]")
+    elemrep=[]
+    for elem in matriz:
+        if elem not in elemrep:
+            elemrep.append(elem)
+    print  elemrep 
+      
 
 def condensa(): #recibe cadena
     limpia_pantalla()
