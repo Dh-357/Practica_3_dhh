@@ -2,12 +2,12 @@ import os
 import itertools
 def mas_repetido(): #recibe matriz
     limpia_pantalla()
-    matriz=input("ingrese_la_matriz entre corchetes [[n],[a],[m],[x]]")
+    matriz=input("ingrese_la_matriz entre corchetes [[n,a],[m,x]]:")
     elemrep=[]
-    for elem in matriz:
-        if elem not in elemrep:
-            elemrep.append(elem)
-    print  elemrep 
+    for x in matriz:
+        for i in x:
+            elemrep.append(i)
+    print  (max(set(elemrep),key=elemrep.count)) 
       
 
 def condensa(): #recibe cadena
